@@ -1,0 +1,16 @@
+{
+  "tenant_id": "synthetic-lab",
+  "project": "layer1-hardware-efficiency",
+  "source": "synthetic-fixture",
+  "observed_at": "2026-07-11T08:00:00Z",
+  "ingested_at": "2026-07-11T08:00:05Z",
+  "metric": "joules_per_work_unit",
+  "value": 0.42,
+  "unit": "ratio",
+  "evidence_ref": "sha256:synthetic-13",
+  "schema_version": "0.1.0",
+  "attributes": {
+    "synthetic": true,
+    "review_required": true
+  }
+}

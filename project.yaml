@@ -1,0 +1,25 @@
+id: "13"
+slug: layer1-hardware-efficiency
+name: "Layer-1 Hardware Efficiency"
+zh_name: "跨平台硬體效率與健康監測"
+status: concept
+maturity: blueprint
+core_question: "Windows、macOS、Linux 裝置的 CPU/GPU/記憶體/磁碟/電源與熱狀態是否有效率且可持續？"
+building_concept: "Building Physics and Envelope Performance（建築物理與外殼效能）"
+entities:
+  - Device
+  - SensorSample
+  - Workload
+  - EfficiencyWindow
+  - HealthAssessment
+metrics:
+  - joules_per_work_unit
+  - idle_waste_ratio
+  - thermal_throttle_time
+  - battery_health_delta
+  - io_amplification
+  - device_lifetime_score
+governance:
+  consequential_decision: human-review-required
+  production_data: prohibited-in-blueprint
+  evidence_provenance: required

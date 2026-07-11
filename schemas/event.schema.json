@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/layer1-hardware-efficiency/event.schema.json",
+  "title": "Layer-1 Hardware Efficiency Evidence Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tenant_id",
+    "project",
+    "source",
+    "observed_at",
+    "metric",
+    "value",
+    "schema_version"
+  ],
+  "properties": {
+    "tenant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project": {
+      "const": "layer1-hardware-efficiency"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ingested_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metric": {
+      "enum": [
+        "joules_per_work_unit",
+        "idle_waste_ratio",
+        "thermal_throttle_time",
+        "battery_health_delta",
+        "io_amplification",
+        "device_lifetime_score"
+      ]
+    },
+    "value": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "evidence_ref": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "number",
+          "boolean",
+          "null"
+        ]
+      }
+    }
+  }
+}
